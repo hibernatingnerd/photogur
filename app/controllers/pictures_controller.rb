@@ -45,4 +45,10 @@ class PicturesController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @picture = Picture.find(params[:id])
+    @picture.destory
+    redirect_to "/picture"
+  end
 end
