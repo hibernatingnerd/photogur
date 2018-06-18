@@ -1,0 +1,17 @@
+<h1>Edit page</h1>
+<p>
+  <%= link_to("Back", "/pictures/#{@picture.id}") %>
+</p>
+
+<%= form_for(@picture, url: "/pictures/#{@picture.id}") do |f| %>
+<%= f.label :artist %>
+<%= f.text_field :artist %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :url %>
+<%= f.text_field :url %>
+
+<%= f.submit %>
+<% end %>

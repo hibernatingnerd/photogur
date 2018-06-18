@@ -1,1 +1,12 @@
-<h1>home page</h1>
+<h1>Pictures</h1>
+
+<%= link_to "new", "pictures/new" %>
+
+<% @pictures.each do |picture| %>
+<p>
+  <%= picture.artist %>
+  <%= picture.title %>
+</p>
+<%= image_tag(picture.url) %>
+
+<% end %>

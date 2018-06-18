@@ -1,0 +1,11 @@
+<h1>Single picture page</h1>
+<%= link_to "Back to home", "/pictures" %>
+<%= link_to("Edit", "/pictures/#{@picture.id}/edit") %>
+<p>
+  <%= @picture.artist %>
+  <%= @picture.title %>
+</p>
+
+<p>
+  <%= image_tag(@picture.url) %>
+</p>
